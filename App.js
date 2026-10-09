@@ -1,20 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import utility from "./utils"
+import TopBar from "./components/topBar"
+import TopUsers from './components/topUsers/topUsers';
+import FeedCard from './components/feedCard/feedCard';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View>
+      <TopBar/>
+      <TopUsers/>
+      </View>
+      <FeedCard/>
+      {/* <StatusBar style="auto" /> */}
+      <Text>bottom bar</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    display:"flex",
+    backgroundColor: utility.darkTheme.backgroundColor,
     alignItems: 'center',
-    justifyContent: 'center',
+    color: utility.darkTheme.color,
+    justifyContent:"space-between",
+    height:"100%",
+    paddingTop:40
   },
+  text:{
+   color:utility.darkTheme.color
+  }
 });
