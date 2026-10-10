@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         justifyContent:"space-between",
         paddingRight:10,
         paddingLeft:10,
-        alignItems:"center"
+        alignItems:"center",
   
     }
 })
