@@ -1,5 +1,6 @@
 import { Image, View, StyleSheet, Pressable, Text } from "react-native";
 import { EllipsisVertical, ThumbsUp, MessageCircle, Share2 } from "lucide-react-native";
+import utility from "../../utils";
 
 export default function FeedCard() {
     const bothUsers = [
@@ -45,14 +46,16 @@ export default function FeedCard() {
 
 const feedStyles = StyleSheet.create({
     feedContainer: {
-        width: "90%",
-        height: "auto",
+        width: "250px",
+        height: "180px",
         borderWidth: 1,
-        borderColor: "white",
+        borderColor: "grey",
         padding:5,
         borderRadius:10,
         display:"flex",
-        alignItems:"center"
+        alignItems:"center",
+        backgroundColor: utility.cardTheme,
+        marginTop:20
 
     },
     cardTop: {
